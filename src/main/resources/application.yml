@@ -1,14 +1,9 @@
-server:
-  port: 5000
-
 eureka:
   instance:
     hostname: eureka-i3a
-  server:
-	enableSelfPreservation: false
     
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://eureka-i3a.herokuapp.com:5000/eureka/
+      defaultZone: http://eureka-i3a.herokuapp.com/eureka/
