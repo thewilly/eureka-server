@@ -4,6 +4,8 @@ server:
 eureka:
   instance:
     hostname: eureka-i3a
+  server:
+  	enableSelfPreservation: false
     
   client:
     registerWithEureka: false
