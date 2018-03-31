@@ -1,2 +1,2 @@
 # eureka-server
-An orchestration server for micro-services
+An orchestration server for micro-service.
