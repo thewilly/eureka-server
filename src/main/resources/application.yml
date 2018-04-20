@@ -1,11 +1,19 @@
 server:
-  port: 9000
+  port: ${PORT:7001}
+
 eureka:
+  datacenter: ${DATACENTER:own}
+  environment: ${ENVIRONMENT:test}
+  region: ${REGION:none}
+  registryFetchIntervalSeconds: 30
+  leaseRenewalIntervalInSeconds: 3
+  leaseExpirationDurationInSeconds: 5
   instance:
-    hostname: eureka-i3a
-    
+    hostname: ${HOSTNAME:eureka}
+
   client:
+    prefer-same-zone-eureka: true
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost/eureka/
+      defaultZone: ${DEFAULT_ZONE:http://localhost:7001/eureka/}
